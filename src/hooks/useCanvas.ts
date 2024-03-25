@@ -138,7 +138,7 @@ export const useCanvas = (canvasRef: MutableRefObject<HTMLCanvasElement | null>)
 
         setSinus(Math.sin(radY))
         setCosinus(Math.cos(radY))
-        setTangens(Math.tan(Math.acos(Math.cos(radX))))
+        setTangens(tan)
         setCtangens(1 / tan)
 
         setDotCoordinateHistory(prevState => {
