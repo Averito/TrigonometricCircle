@@ -134,10 +134,12 @@ export const useCanvas = (canvasRef: MutableRefObject<HTMLCanvasElement | null>)
         const newDotX = radius * Math.cos(radX);
         const newDotY = radius * Math.sin(radY);
 
-        const tan = Math.tan(radX)
+        const sin = Math.sin(radY) * -1
+        const cos = Math.cos(radX)
+        const tan = sin / cos
 
-        setSinus(Math.sin(radY))
-        setCosinus(Math.cos(radY))
+        setSinus(sin)
+        setCosinus(cos)
         setTangens(tan)
         setCtangens(1 / tan)
 
